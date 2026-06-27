@@ -7,14 +7,14 @@
 }
 
 body {
-    /* Fondo azul degradado de la plantilla Gilb */
+    /* Fondo azul degradado de la plantilla original */
     background: linear-gradient(135deg, #122244 0%, #1a3568 100%);
     min-height: 100vh;
     overflow-x: hidden;
 }
 
 /* ==========================================================================
-   ESTILOS DEL NAVBAR (Preservado del paso anterior)
+   ESTILOS DEL NAVBAR (Preservados y correctos)
    ========================================================================== */
 .header {
     width: 100%;
@@ -43,7 +43,7 @@ body {
 }
 
 .logo a span {
-    color: #ff4a57; /* Punto característico del diseño */
+    color: #ff4a57;
 }
 
 .nav-links {
@@ -90,14 +90,14 @@ body {
 }
 
 /* ==========================================================================
-   ESTILOS DE LA SECCIÓN HERO (Nueva adición)
+   ESTILOS DE LA SECCIÓN HERO (Actualizados)
    ========================================================================== */
 .hero-section {
     width: 100%;
     min-height: 100vh;
     display: flex;
-    align-items: center;
-    padding-top: 100px; /* Espacio para que el menú absolute no tape el contenido */
+    align-items: center; /* Centrado vertical del contenedor completo */
+    padding-top: 100px;
 }
 
 .hero-container {
@@ -111,33 +111,26 @@ body {
     gap: 40px;
 }
 
-/* Bloque de Texto (Izquierda) */
+/* Bloque de Texto (Alineación izquierda en su contenedor) */
 .hero-content {
-    flex: 1;
-    max-width: 600px;
+    flex: 1.2; /* Toma un poco más de espacio para los textos largos */
+    max-width: 650px;
+    text-align: left; /* Asegura la alineación estricta a la izquierda */
 }
 
 .hero-subtitle {
-    color: #ff4a57; /* Color de acento */
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    color: #ff4a57;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
 }
 
 .hero-title {
     color: #ffffff;
-    font-size: 52px;
+    font-size: 54px; /* Texto más grande como se solicitó */
     font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 20px;
-}
-
-.hero-description {
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 16px;
-    line-height: 1.6;
+    line-height: 1.25;
     margin-bottom: 35px;
 }
 
@@ -159,9 +152,9 @@ body {
     transform: translateY(-2px);
 }
 
-/* Bloque de Imagen (Derecha) */
+/* Bloque de Imagen */
 .hero-image-box {
-    flex: 1;
+    flex: 0.8;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -170,13 +163,13 @@ body {
 .hero-img {
     width: 420px;
     height: 420px;
-    object-fit: cover; /* Ajusta la imagen dentro de las dimensiones sin deformarla */
-    border-radius: 50%; /* Transforma la foto cuadrada/rectangular en círculo impecable */
-    border: 8px solid rgba(255, 255, 255, 0.1); /* Borde sutil elegante */
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); /* Sombra suave para dar profundidad */
+    object-fit: cover;
+    border-radius: 50%;
+    border: 8px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
-/* Ajustes Responsivos Básicos */
+/* Ajustes Responsivos */
 @media (max-width: 992px) {
     .hero-container {
         flex-direction: column-reverse;
@@ -184,16 +177,20 @@ body {
         padding-top: 40px;
     }
     
+    .hero-content {
+        text-align: center; /* En móviles se centra para mejor visualización */
+    }
+    
     .hero-image-box {
         justify-content: center;
     }
     
     .hero-img {
-        width: 320px;
-        height: 320px;
+        width: 300px;
+        height: 300px;
     }
     
     .hero-title {
-        font-size: 38px;
+        font-size: 36px;
     }
 }
