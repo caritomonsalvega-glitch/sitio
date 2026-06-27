@@ -1,0 +1,16 @@
+/* Estilos para verificar la conexión */
+body {
+    background-color: #eef2f7; /* Fondo gris azulado claro */
+    font-family: system-ui, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    color: #3182ce; /* Texto azul */
+    font-size: 2.5rem;
+    text-align: center;
+}
